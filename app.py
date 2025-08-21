@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from io import StringIO
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -126,6 +127,26 @@ if data_file:
     st.session_state.data = load_data(data_file)
 
 df = st.session_state.data
+
+
+st.subheader("📄 Batch CSV Prediction")
+
+with st.expander("CSV Template & Notes", expanded=False):
+    # Create CSV template in memory
+    template = StringIO()
+    template.write("customerID,gender,SeniorCitizen,Partner,Dependents,tenure,PhoneService,MultipleLines,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,Contract,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,Churn\n")
+    template.write('7590-VHVEG,Female,0,Yes,No,1,Yes,No,DSL,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,29.85,29.85,No\n')
+    template.write('5575-GNVDE,Male,0,No,No,34,Yes,Yes,Fiber optic,Yes,No,Yes,No,No,No,One year,No,Mailed check,56.95,1889.5,Yes\n')
+    template.seek(0)
+
+    # Download button
+    st.download_button(
+        label="Download CSV Template",
+        data=template.getvalue().encode('utf-8'),
+        file_name="customer_churn_template.csv",
+        mime="text/csv"
+    )
+
 
 # -----------------------------
 # PAGES
