@@ -82,5 +82,5 @@ Contributions are welcome! Feel free to fork this repo, open issues, or submit p
 ---
 
 ## 📧 Contact
-Created by **[Your Name](https://github.com/your-username)**  
-For questions, reach out at *your.email@example.com*
+Created by **[Shivesh Tiwari](https://github.com/shivesh122/shivesh122)**  
+For questions, reach out at *nikutiwari70@gmail.com*
