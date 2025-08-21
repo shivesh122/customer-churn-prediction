@@ -11,7 +11,7 @@ A machine learning project to predict which customers are likely to leave a comp
 - 📈 Visualize model performance with accuracy, precision, recall, and confusion matrix  
 - 🧑‍💻 Predict churn for **single customers** or in **batch mode**  
 - 💾 Save and load trained models for reuse  
-- 🌐 Deployable directly on [Streamlit Cloud](https://streamlit.io/)  
+- 🌐 Deployable directly on [Render](https://render.com)  
 
 ---
 
@@ -65,7 +65,7 @@ You can also upload your own dataset in `.csv` format.
 
 ## 🌟 Demo Screenshots
 ### Dashboard Preview
-![Dashboard Screenshot](https://via.placeholder.com/900x400.png?text=Add+your+screenshot+here)
+![Dashboard Screenshot](/Dashboard.png)
 
 ---
 
