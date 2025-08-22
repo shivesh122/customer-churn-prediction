@@ -1,0 +1,13 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # every 5 minutes
+  workflow_dispatch:        # lets you trigger manually if needed
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render App
+        run: curl -s https://customer-churn-prediction-7f8c.onrender.com > /dev/null
